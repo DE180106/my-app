@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Bình đun siêu tốc Inox 1.8L",
+    "category": "Đồ điện gia dụng",
+    "price": 299000,
+    "image": "/images/binh-dun.jpg",
+    "description": "Bình đun nước inox 1.8L, công suất 1800W, tự ngắt khi sôi.",
+    "stock": 15
+  },
+  {
+    "id": 2,
+    "name": "Quạt cây Panasonic F409K",
+    "category": "Thiết bị làm mát",
+    "price": 1250000,
+    "image": "/images/quat-cay.jpg",
+    "description": "Quạt cây 3 tốc độ, xoay đảo gió, tiết kiệm điện năng.",
+    "stock": 8
+  },
+  {
+    "id": 3,
+    "name": "Bộ bàn ghế gỗ sồi 4 chỗ",
+    "category": "Nội thất phòng ăn",
+    "price": 5200000,
+    "image": "/images/ban-ghe-go.jpg",
+    "description": "Bộ bàn ghế gỗ sồi tự nhiên, sơn PU cao cấp, bền đẹp.",
+    "stock": 3
+  },
+  {
+    "id": 4,
+    "name": "Đèn bàn học LED cảm ứng",
+    "category": "Đèn chiếu sáng",
+    "price": 450000,
+    "image": "/images/den-ban-led.jpg",
+    "description": "Đèn LED tiết kiệm điện, có thể điều chỉnh độ sáng 3 mức.",
+    "stock": 20
+  },
+  {
+    "id": 5,
+    "name": "Máy xay sinh tố Philips HR2118",
+    "category": "Thiết bị nhà bếp",
+    "price": 1350000,
+    "image": "/images/may-xay.jpg",
+    "description": "Máy xay sinh tố công suất 600W, lưỡi dao thép không gỉ, 3 tốc độ xay.",
+    "stock": 10
+  },
+  {
+    "id": 6,
+    "name": "Nồi chiên không dầu Lock&Lock 5.2L",
+    "category": "Thiết bị nhà bếp",
+    "price": 2350000,
+    "image": "/images/noi-chien.jpg",
+    "description": "Nồi chiên dung tích lớn, điều chỉnh nhiệt độ và thời gian dễ dàng.",
+    "stock": 7
+  },
+  {
+    "id": 7,
+    "name": "Tủ nhựa 4 ngăn Duy Tân",
+    "category": "Nội thất phòng ngủ",
+    "price": 950000,
+    "image": "/images/tu-nhua.jpg",
+    "description": "Tủ nhựa cao cấp, màu pastel nhẹ nhàng, tiện lợi cho gia đình.",
+    "stock": 12
+  },
+  {
+    "id": 8,
+    "name": "Bộ nồi inox Sunhouse SH890",
+    "category": "Đồ dùng nhà bếp",
+    "price": 890000,
+    "image": "/images/bo-noi.jpg",
+    "description": "Bộ 3 nồi inox đáy 5 lớp, sử dụng được cho bếp từ, gas, điện.",
+    "stock": 9
+  }
+]
