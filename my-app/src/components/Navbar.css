@@ -256,3 +256,28 @@
   border-radius:10px; cursor:pointer; font-weight:700;
 }
 .logout-btn:hover { background:#e25555; }
+
+
+/* Account area */
+.account-area { position: relative; display: inline-block; }
+.account-btn {
+  border: 1px solid #e6e6e6; background: #fff; color:#333;
+  padding: 8px 12px; border-radius: 999px; font-weight: 700; cursor: pointer;
+}
+.account-btn:hover { background:#f5f5ff; }
+
+.profile-menu {
+  position: absolute; top: 120%; background:#fff; border:1px solid #eee;
+  border-radius: 12px; padding: 8px; min-width: 200px; box-shadow: 0 12px 28px rgba(0,0,0,.12);
+  z-index: 1000;
+}
+.profile-menu.right { right: 0; }
+
+.menu-item {
+  width: 100%; display: block; text-align: left; padding: 10px 12px;
+  border-radius: 8px; border: none; background: transparent; cursor: pointer;
+  font-weight: 600; color: #333; text-decoration: none;
+}
+.menu-item:hover { background: #f6f7fb; }
+.menu-item.danger { color: #b00020; }
+.menu-item.danger:hover { background: #ffe8e8; }
