@@ -7,6 +7,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { AuthProvider } from "./context/AuthContext";
 import "./App.css";
+import Settings from "./components/Settings";
 
 const App = () => {
   return (
@@ -16,10 +17,11 @@ const App = () => {
           <Navbar />
           <main className="main-content">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/login" element={<Login />} />
-            </Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/register" element={<Register />} />
+  <Route path="/login" element={<Login />} />
+  <Route path="/settings" element={<Settings />} />
+</Routes>
           </main>
           <Footer />
         </div>
