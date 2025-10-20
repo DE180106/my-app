@@ -2,92 +2,69 @@ import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="footer" id="contact">
+    <footer className="footer">
       <div className="footer-container">
-        <div className="footer-content">
-          {/* Thông tin công ty */}
+        <div className="footer-top">
           <div className="footer-column">
             <h3>🏠 HomeLiving Store</h3>
-            <p className="footer-description">
-              Cung cấp đồ gia dụng và nội thất chất lượng cao cho ngôi nhà Việt. 
-              Sản phẩm đa dạng, giá cả hợp lý, dịch vụ tận tâm.
-            </p>
+            <p>Giải pháp hoàn hảo cho ngôi nhà của bạn</p>
             <div className="social-links">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                Facebook
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                Instagram
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-                YouTube
-              </a>
+              <a href="#facebook" aria-label="Facebook">📘</a>
+              <a href="#instagram" aria-label="Instagram">📷</a>
+              <a href="#twitter" aria-label="Twitter">🐦</a>
+              <a href="#youtube" aria-label="YouTube">📺</a>
             </div>
           </div>
 
-          {/* Liên kết */}
           <div className="footer-column">
             <h4>Về chúng tôi</h4>
-            <ul className="footer-links">
+            <ul>
               <li><a href="#about">Giới thiệu</a></li>
+              <li><a href="#news">Tin tức</a></li>
+              <li><a href="#career">Tuyển dụng</a></li>
               <li><a href="#contact">Liên hệ</a></li>
-              <li><a href="#stores">Hệ thống cửa hàng</a></li>
-              <li><a href="#careers">Tuyển dụng</a></li>
             </ul>
           </div>
 
-          {/* Chăm sóc khách hàng */}
           <div className="footer-column">
-            <h4>Chăm sóc khách hàng</h4>
-            <ul className="footer-links">
-              <li><a href="#shipping">Chính sách giao hàng</a></li>
-              <li><a href="#returns">Đổi trả & Hoàn tiền</a></li>
-              <li><a href="#warranty">Bảo hành</a></li>
+            <h4>Chính sách</h4>
+            <ul>
+              <li><a href="#privacy">Chính sách bảo mật</a></li>
+              <li><a href="#terms">Điều khoản sử dụng</a></li>
+              <li><a href="#return">Chính sách đổi trả</a></li>
+              <li><a href="#shipping">Chính sách vận chuyển</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-column">
+            <h4>Hỗ trợ khách hàng</h4>
+            <ul>
               <li><a href="#faq">Câu hỏi thường gặp</a></li>
+              <li><a href="#guide">Hướng dẫn mua hàng</a></li>
+              <li><a href="#payment">Phương thức thanh toán</a></li>
+              <li><a href="#warranty">Chính sách bảo hành</a></li>
             </ul>
           </div>
 
-          {/* Thông tin liên hệ */}
           <div className="footer-column">
-            <h4>Thông tin liên hệ</h4>
-            <ul className="footer-contact">
-              <li>
-                <span>📍 123 Đường ABC, Quận 1, TP.HCM</span>
-              </li>
-              <li>
-                <span>📞 Hotline: 1900 xxxx</span>
-              </li>
-              <li>
-                <span>✉️ Email: support@homeliving.vn</span>
-              </li>
-              <li>
-                <span>🕐 Giờ làm việc: 8:00 - 22:00</span>
-              </li>
+            <h4>Liên hệ</h4>
+            <ul className="contact-info">
+              <li>📍 Địa chỉ: 123 Đường ABC, Quận XYZ, TP.HCM</li>
+              <li>📞 Hotline: 1900-xxxx</li>
+              <li>✉️ Email: support@homeliving.com</li>
+              <li>🕐 Giờ làm việc: 8:00 - 22:00</li>
             </ul>
           </div>
         </div>
 
-        {/* Phương thức thanh toán */}
-        <div className="footer-payment">
-          <h4>Phương thức thanh toán</h4>
-          <div className="payment-icons">
-            <span>💳 Visa</span>
-            <span>💳 Mastercard</span>
-            <span>💵 Tiền mặt</span>
-            <span>🏦 Chuyển khoản</span>
-          </div>
-        </div>
-
-        {/* Copyright */}
         <div className="footer-bottom">
-          <p>&copy; {currentYear} HomeLiving Store. Thiết kế bởi Ngọc. All rights reserved.</p>
-          <div className="footer-bottom-links">
-            <a href="#terms">Điều khoản sử dụng</a>
-            <span className="separator">|</span>
-            <a href="#privacy">Chính sách bảo mật</a>
+          <p>&copy; 2025 HomeLiving Store. All rights reserved.</p>
+          <div className="payment-methods">
+            <span>💳 Phương thức thanh toán:</span>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" width="40" height="25" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="40" height="25" />
+<img src="https://img.icons8.com/color/48/cash-on-delivery.png" alt="Cash on Delivery" width="40" height="25" />
           </div>
         </div>
       </div>
