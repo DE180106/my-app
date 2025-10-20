@@ -52,3 +52,8 @@
   color: #ff6b6b;
   font-weight: 500;
 }
+
+
+.field-error { color: #b00020; margin-top: 6px; font-size: 0.92rem; }
+input.invalid { border-color: #b00020; background: #fff6f6; }
+button[disabled] { opacity: .6; cursor: not-allowed; }
