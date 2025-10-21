@@ -1,18 +1,32 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import { AuthProvider } from "./context/AuthContext";
+import "./App.css";
+import Settings from "./components/Settings";
 
 const App = () => {
   return (
-    <div className="app-container">
-      <Navbar />
-      <main className="main-content">
-        <Home />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <AuthProvider>
+        <div className="app-container">
+          <Navbar />
+          <main className="main-content">
+            <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/register" element={<Register />} />
+  <Route path="/login" element={<Login />} />
+  <Route path="/settings" element={<Settings />} />
+</Routes>
+          </main>
+          <Footer />
+        </div>
+      </AuthProvider>
+    </Router>
   );
 };
 

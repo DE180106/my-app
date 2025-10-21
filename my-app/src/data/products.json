@@ -4,7 +4,7 @@
     "name": "Bình đun siêu tốc Inox 1.8L",
     "category": "Đồ điện gia dụng",
     "price": 299000,
-    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&q=80",
+    "image": "/images/binh-dun.jpg",
     "description": "Bình đun nước inox 1.8L, công suất 1800W, tự ngắt khi sôi.",
     "stock": 15
   },
@@ -13,7 +13,7 @@
     "name": "Quạt cây Panasonic F409K",
     "category": "Thiết bị làm mát",
     "price": 1250000,
-    "image": "https://images.unsplash.com/photo-1624707081828-91e62c43aa5a?w=500&q=80",
+    "image": "/images/quat-cay.jpg",
     "description": "Quạt cây 3 tốc độ, xoay đảo gió, tiết kiệm điện năng.",
     "stock": 8
   },
@@ -22,7 +22,7 @@
     "name": "Bộ bàn ghế gỗ sồi 4 chỗ",
     "category": "Nội thất phòng ăn",
     "price": 5200000,
-    "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=500&q=80",
+    "image": "/images/ban-ghe-go.jpg",
     "description": "Bộ bàn ghế gỗ sồi tự nhiên, sơn PU cao cấp, bền đẹp.",
     "stock": 3
   },
@@ -31,7 +31,7 @@
     "name": "Đèn bàn học LED cảm ứng",
     "category": "Đèn chiếu sáng",
     "price": 450000,
-    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&q=80",
+    "image": "/images/den-ban-led.jpg",
     "description": "Đèn LED tiết kiệm điện, có thể điều chỉnh độ sáng 3 mức.",
     "stock": 20
   },
@@ -40,7 +40,7 @@
     "name": "Máy xay sinh tố Philips HR2118",
     "category": "Thiết bị nhà bếp",
     "price": 1350000,
-    "image": "https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=500&q=80",
+    "image": "/images/may-xay.jpg",
     "description": "Máy xay sinh tố công suất 600W, lưỡi dao thép không gỉ, 3 tốc độ xay.",
     "stock": 10
   },
@@ -49,7 +49,7 @@
     "name": "Nồi chiên không dầu Lock&Lock 5.2L",
     "category": "Thiết bị nhà bếp",
     "price": 2350000,
-    "image": "https://images.unsplash.com/photo-1584990347449-39e5b65d8e6c?w=500&q=80",
+    "image": "/images/noi-chien.jpg",
     "description": "Nồi chiên dung tích lớn, điều chỉnh nhiệt độ và thời gian dễ dàng.",
     "stock": 7
   },
@@ -58,7 +58,7 @@
     "name": "Tủ nhựa 4 ngăn Duy Tân",
     "category": "Nội thất phòng ngủ",
     "price": 950000,
-    "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=80",
+    "image": "/images/tu-nhua.jpg",
     "description": "Tủ nhựa cao cấp, màu pastel nhẹ nhàng, tiện lợi cho gia đình.",
     "stock": 12
   },
@@ -67,7 +67,7 @@
     "name": "Bộ nồi inox Sunhouse SH890",
     "category": "Đồ dùng nhà bếp",
     "price": 890000,
-    "image": "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=500&q=80",
+    "image": "/images/bo-noi.jpg",
     "description": "Bộ 3 nồi inox đáy 5 lớp, sử dụng được cho bếp từ, gas, điện.",
     "stock": 9
   }
