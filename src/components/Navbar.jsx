@@ -4,8 +4,8 @@ import { useAuth } from "../context/AuthContext";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);      // menu hamburger
-  const [openProfile, setOpenProfile] = useState(false);     // menu tài khoản
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openProfile, setOpenProfile] = useState(false);
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const profileRef = useRef(null);
@@ -18,7 +18,6 @@ const Navbar = () => {
     navigate("/");
   };
 
-  // Đóng menu tài khoản khi click ra ngoài
   useEffect(() => {
     const onClickOutside = (e) => {
       if (profileRef.current && !profileRef.current.contains(e.target)) {
@@ -44,7 +43,7 @@ const Navbar = () => {
           <span className={isMenuOpen ? "active" : ""}></span>
         </button>
 
-        {/* Menu trái (giữ như cũ, không hiển thị login/register ở đây nữa) */}
+        {/* Menu trái */}
         <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
           <li><Link to="/">Trang chủ</Link></li>
           <li><a href="#products">Sản phẩm</a></li>
@@ -87,6 +86,18 @@ const Navbar = () => {
                   <Link className="menu-item" to="/settings" onClick={() => setOpenProfile(false)}>
                     Thông tin & Cài đặt
                   </Link>
+
+                  {/* ✅ Chỉ admin mới thấy nút Quản lý */}
+                  {user?.role === "admin" && (
+                    <Link
+                      className="menu-item"
+                      to="/admin"
+                      onClick={() => setOpenProfile(false)}
+                    >
+                      Quản lý
+                    </Link>
+                  )}
+
                   <button className="menu-item danger" onClick={handleLogout}>
                     Đăng xuất
                   </button>
