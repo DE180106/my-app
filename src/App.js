@@ -10,6 +10,7 @@ import "./App.css";
 import Settings from "./components/Settings";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
+import Admin from "./pages/Admin";
 
 const App = () => {
   return (
@@ -23,8 +24,8 @@ const App = () => {
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/settings" element={<Settings />} />
-              {/* Thêm 2 dòng này */}
               <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/admin" element={<Admin />} />
               <Route
                 path="/reset-password/:token"
                 element={<ResetPassword />}
