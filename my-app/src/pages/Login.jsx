@@ -27,11 +27,30 @@ const Login = () => {
         <h2>Đăng nhập</h2>
         {err && <div className="auth-error">{err}</div>}
         <label>Email</label>
-        <input type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input
+          type="email"
+          placeholder="you@example.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
         <label>Mật khẩu</label>
-        <input type="password" placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button className="auth-btn" type="submit">Đăng nhập</button>
-        <p className="auth-help">Chưa có tài khoản? <Link to="/register">Đăng ký</Link></p>
+        <input
+          type="password"
+          placeholder="••••••••"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button className="auth-btn" type="submit">
+          Đăng nhập
+        </button>
+        <p className="auth-help">
+          Chưa có tài khoản? <Link to="/register">Đăng ký</Link>
+        </p>
+        <p className="forgot-link">
+          <Link to="/forgot-password">Quên mật khẩu?</Link>
+        </p>
       </form>
     </div>
   );
