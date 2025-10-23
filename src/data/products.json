@@ -1,74 +1,164 @@
-[
-  {
-    "id": 1,
-    "name": "Bình đun siêu tốc Inox 1.8L",
-    "category": "Đồ điện gia dụng",
-    "price": 299000,
-    "image": "/images/binh-dun.jpg",
-    "description": "Bình đun nước inox 1.8L, công suất 1800W, tự ngắt khi sôi.",
-    "stock": 15
-  },
-  {
-    "id": 2,
-    "name": "Quạt cây Panasonic F409K",
-    "category": "Thiết bị làm mát",
-    "price": 1250000,
-    "image": "/images/quat-cay.jpg",
-    "description": "Quạt cây 3 tốc độ, xoay đảo gió, tiết kiệm điện năng.",
-    "stock": 8
-  },
-  {
-    "id": 3,
-    "name": "Bộ bàn ghế gỗ sồi 4 chỗ",
-    "category": "Nội thất phòng ăn",
-    "price": 5200000,
-    "image": "/images/ban-ghe-go.jpg",
-    "description": "Bộ bàn ghế gỗ sồi tự nhiên, sơn PU cao cấp, bền đẹp.",
-    "stock": 3
-  },
-  {
-    "id": 4,
-    "name": "Đèn bàn học LED cảm ứng",
-    "category": "Đèn chiếu sáng",
-    "price": 450000,
-    "image": "/images/den-ban-led.jpg",
-    "description": "Đèn LED tiết kiệm điện, có thể điều chỉnh độ sáng 3 mức.",
-    "stock": 20
-  },
-  {
-    "id": 5,
-    "name": "Máy xay sinh tố Philips HR2118",
-    "category": "Thiết bị nhà bếp",
-    "price": 1350000,
-    "image": "/images/may-xay.jpg",
-    "description": "Máy xay sinh tố công suất 600W, lưỡi dao thép không gỉ, 3 tốc độ xay.",
-    "stock": 10
-  },
-  {
-    "id": 6,
-    "name": "Nồi chiên không dầu Lock&Lock 5.2L",
-    "category": "Thiết bị nhà bếp",
-    "price": 2350000,
-    "image": "/images/noi-chien.jpg",
-    "description": "Nồi chiên dung tích lớn, điều chỉnh nhiệt độ và thời gian dễ dàng.",
-    "stock": 7
-  },
-  {
-    "id": 7,
-    "name": "Tủ nhựa 4 ngăn Duy Tân",
-    "category": "Nội thất phòng ngủ",
-    "price": 950000,
-    "image": "/images/tu-nhua.jpg",
-    "description": "Tủ nhựa cao cấp, màu pastel nhẹ nhàng, tiện lợi cho gia đình.",
-    "stock": 12
-  },
-  {
-    "id": 8,
-    "name": "Bộ nồi inox Sunhouse SH890",
-    "category": "Đồ dùng nhà bếp",
-    "price": 890000,
-    "image": "/images/bo-noi.jpg",
-    "description": "Bộ 3 nồi inox đáy 5 lớp, sử dụng được cho bếp từ, gas, điện.",
-    "stock": 9
-  }
-]
+{
+  "products": [
+    {
+      "id": "p1",
+      "name": "Ấm đun siêu tốc Inox 1.8L",
+      "price": 259000,
+      "image": "https://picsum.photos/seed/p1/600/600",
+      "category": "Đồ điện gia dụng",
+      "stock": 25
+    },
+    {
+      "id": "p2",
+      "name": "Quạt đứng 5 cánh 45W",
+      "price": 499000,
+      "image": "https://picsum.photos/seed/p2/600/600",
+      "category": "Thiết bị làm mát",
+      "stock": 8
+    },
+    {
+      "id": "p3",
+      "name": "Bộ bàn ăn 4 ghế gỗ sồi",
+      "price": 3599000,
+      "image": "https://picsum.photos/seed/p3/600/600",
+      "category": "Nội thất phòng ăn",
+      "stock": 4
+    },
+    {
+      "id": "p4",
+      "name": "Đèn bàn LED chống cận",
+      "price": 189000,
+      "image": "https://picsum.photos/seed/p4/600/600",
+      "category": "Đèn chiếu sáng",
+      "stock": 40
+    },
+    {
+      "id": "p5",
+      "name": "Chảo chống dính 28cm",
+      "price": 299000,
+      "image": "https://picsum.photos/seed/p5/600/600",
+      "category": "Thiết bị nhà bếp",
+      "stock": 17
+    },
+    {
+      "id": "p6",
+      "name": "Bộ ga giường cotton 1m6",
+      "price": 459000,
+      "image": "https://picsum.photos/seed/p6/600/600",
+      "category": "Nội thất phòng ngủ",
+      "stock": 12
+    },
+    {
+      "id": "p7",
+      "name": "Máy xay sinh tố 600W",
+      "price": 749000,
+      "image": "https://picsum.photos/seed/p7/600/600",
+      "category": "Đồ điện gia dụng",
+      "stock": 6
+    },
+    {
+      "id": "p8",
+      "name": "Kệ sách gỗ 4 tầng",
+      "price": 690000,
+      "image": "https://picsum.photos/seed/p8/600/600",
+      "category": "Nội thất",
+      "stock": 21
+    },
+    {
+      "id": "p9",
+      "name": "Máy lọc không khí thông minh",
+      "price": 1890000,
+      "image": "https://picsum.photos/seed/p9/600/600",
+      "category": "Thiết bị làm mát",
+      "stock": 15
+    },
+    {
+      "id": "p10",
+      "name": "Bàn làm việc gỗ công nghiệp",
+      "price": 1290000,
+      "image": "https://picsum.photos/seed/p10/600/600",
+      "category": "Nội thất phòng ăn",
+      "stock": 10
+    },
+    {
+      "id": "p11",
+      "name": "Đèn ngủ cảm biến ánh sáng",
+      "price": 159000,
+      "image": "https://picsum.photos/seed/p11/600/600",
+      "category": "Đèn chiếu sáng",
+      "stock": 35
+    },
+    {
+      "id": "p12",
+      "name": "Nồi chiên không dầu 4L",
+      "price": 999000,
+      "image": "https://picsum.photos/seed/p12/600/600",
+      "category": "Thiết bị nhà bếp",
+      "stock": 9
+    },
+    {
+      "id": "p13",
+      "name": "Bộ chăn ga gối satin cao cấp",
+      "price": 790000,
+      "image": "https://picsum.photos/seed/p13/600/600",
+      "category": "Nội thất phòng ngủ",
+      "stock": 13
+    },
+    {
+      "id": "p14",
+      "name": "Tủ gỗ đa năng 4 ngăn kéo",
+      "price": 1450000,
+      "image": "https://picsum.photos/seed/p14/600/600",
+      "category": "Nội thất phòng ăn",
+      "stock": 6
+    },
+    {
+      "id": "p15",
+      "name": "Quạt điều hòa 30L công suất lớn",
+      "price": 2890000,
+      "image": "https://picsum.photos/seed/p15/600/600",
+      "category": "Thiết bị làm mát",
+      "stock": 7
+    },
+    {
+      "id": "p16",
+      "name": "Máy pha cà phê mini",
+      "price": 1250000,
+      "image": "https://picsum.photos/seed/p16/600/600",
+      "category": "Thiết bị nhà bếp",
+      "stock": 20
+    },
+    {
+      "id": "p17",
+      "name": "Bàn ăn kính cường lực 6 ghế",
+      "price": 5690000,
+      "image": "https://picsum.photos/seed/p17/600/600",
+      "category": "Nội thất phòng ăn",
+      "stock": 4
+    },
+    {
+      "id": "p18",
+      "name": "Đèn LED trần nhà cảm biến",
+      "price": 490000,
+      "image": "https://picsum.photos/seed/p18/600/600",
+      "category": "Đèn chiếu sáng",
+      "stock": 22
+    },
+    {
+      "id": "p19",
+      "name": "Máy sấy tóc công suất cao",
+      "price": 299000,
+      "image": "https://picsum.photos/seed/p19/600/600",
+      "category": "Đồ điện gia dụng",
+      "stock": 25
+    },
+    {
+      "id": "p20",
+      "name": "Giường ngủ gỗ sồi 1m8",
+      "price": 4990000,
+      "image": "https://picsum.photos/seed/p20/600/600",
+      "category": "Nội thất phòng ngủ",
+      "stock": 5
+    }
+  ]
+}
