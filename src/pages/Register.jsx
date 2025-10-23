@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import "./Register.css";
+import "../styles/Register.css";
 
 const USERS_KEY = "hl_users";
 const normalize = (s = "") => s.trim().toLowerCase();

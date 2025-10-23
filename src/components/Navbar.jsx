@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import "./Navbar.css";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,29 +50,43 @@ const Navbar = () => {
         {/* Menu trái */}
         <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
           <li>
-            <Link to="/" onClick={() => setIsMenuOpen(false)}>Trang chủ</Link>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Trang chủ
+            </Link>
           </li>
           <li>
-            <a href="#products" onClick={() => setIsMenuOpen(false)}>Sản phẩm</a>
+            <a href="#products" onClick={() => setIsMenuOpen(false)}>
+              Sản phẩm
+            </a>
           </li>
           <li>
-            <a href="#categories" onClick={() => setIsMenuOpen(false)}>Danh mục</a>
+            <a href="#categories" onClick={() => setIsMenuOpen(false)}>
+              Danh mục
+            </a>
           </li>
           <li>
-            <a href="#about" onClick={() => setIsMenuOpen(false)}>Giới thiệu</a>
+            <a href="#about" onClick={() => setIsMenuOpen(false)}>
+              Giới thiệu
+            </a>
           </li>
           <li>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)}>Liên hệ</a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+              Liên hệ
+            </a>
           </li>
           {/* ✅ Link Feedback */}
           <li>
-            <Link to="/feedback" onClick={() => setIsMenuOpen(false)}>Feedback</Link>
+            <Link to="/feedback" onClick={() => setIsMenuOpen(false)}>
+              Feedback
+            </Link>
           </li>
         </ul>
 
         {/* Icons + Tài khoản */}
         <div className="navbar-icons" ref={profileRef}>
-          <a href="#search" className="icon-link" aria-label="Tìm kiếm">🔍</a>
+          <a href="#search" className="icon-link" aria-label="Tìm kiếm">
+            🔍
+          </a>
           <a href="#cart" className="icon-link" aria-label="Giỏ hàng">
             🛒 <span className="cart-badge">0</span>
           </a>

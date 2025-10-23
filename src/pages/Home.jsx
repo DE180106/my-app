@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import './Home.css';
-import { useAuth } from '../context/AuthContext'; // dùng để biết role người dùng
-
+import React, { useState, useEffect } from "react";
+import { useAuth } from "../context/AuthContext"; // dùng để biết role người dùng
+import "../styles/Home.css";
 const Home = () => {
   const { user } = useAuth(); // kiểm tra role admin
 
   const [products, setProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [sortOption, setSortOption] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const [sortOption, setSortOption] = useState("");
 
   useEffect(() => {
-    fetch('/data/products.json')
-      .then(response => response.json())
-      .then(data => setProducts(data))
-      .catch(error => console.error('Lỗi:', error));
+    fetch("/data/products.json")
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Lỗi:", error));
   }, []);
 
   /**
@@ -23,37 +22,37 @@ const Home = () => {
    * - Chèn thẳng vào DOM ở giữa "Thông tin & Cài đặt" và "Đăng xuất"
    */
   useEffect(() => {
-    if (!user || user.role !== 'admin') return;
+    if (!user || user.role !== "admin") return;
 
     const insertAdminLink = () => {
       // gom các menu có thể là dropdown user
       const candidates = Array.from(
         document.querySelectorAll(
-          '.dropdown-menu, .hl-dropdown, .user-menu, .hl-dropdown-card, .list-group'
+          ".dropdown-menu, .hl-dropdown, .user-menu, .hl-dropdown-card, .list-group"
         )
       );
 
       for (const menu of candidates) {
-        const items = Array.from(menu.querySelectorAll('a,button'));
-        const settingsItem = items.find(el =>
-          /thông tin|cài đặt/i.test(el.textContent || '')
+        const items = Array.from(menu.querySelectorAll("a,button"));
+        const settingsItem = items.find((el) =>
+          /thông tin|cài đặt/i.test(el.textContent || "")
         );
-        const logoutItem = items.find(el =>
-          /đăng xuất/i.test(el.textContent || '')
+        const logoutItem = items.find((el) =>
+          /đăng xuất/i.test(el.textContent || "")
         );
 
         if (settingsItem && logoutItem) {
           // tránh chèn trùng
-          if (menu.querySelector('#hl-admin-link')) return;
+          if (menu.querySelector("#hl-admin-link")) return;
 
           // tạo link "Quản lý"
-          const adminLink = document.createElement('a');
-          adminLink.id = 'hl-admin-link';
-          adminLink.href = '/admin';
-          adminLink.textContent = 'Quản lý';
+          const adminLink = document.createElement("a");
+          adminLink.id = "hl-admin-link";
+          adminLink.href = "/admin";
+          adminLink.textContent = "Quản lý";
 
           // đồng bộ class để giữ style giống item đang có
-          adminLink.className = settingsItem.className || 'dropdown-item';
+          adminLink.className = settingsItem.className || "dropdown-item";
 
           // chèn ngay TRƯỚC nút "Đăng xuất"
           logoutItem.parentNode.insertBefore(adminLink, logoutItem);
@@ -76,12 +75,42 @@ const Home = () => {
   }, [user]);
 
   const categories = [
-    { icon: '⚡', title: 'Đồ điện gia dụng', value: 'dien', gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' },
-    { icon: '🌀', title: 'Thiết bị làm mát', value: 'mat', gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' },
-    { icon: '🪑', title: 'Nội thất phòng ăn', value: 'noi-that', gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' },
-    { icon: '💡', title: 'Đèn chiếu sáng', value: 'den', gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)' },
-    { icon: '🍳', title: 'Thiết bị nhà bếp', value: 'bep', gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)' },
-    { icon: '🛏️', title: 'Nội thất phòng ngủ', value: 'phong-ngu', gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)' }
+    {
+      icon: "⚡",
+      title: "Đồ điện gia dụng",
+      value: "dien",
+      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    },
+    {
+      icon: "🌀",
+      title: "Thiết bị làm mát",
+      value: "mat",
+      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+    },
+    {
+      icon: "🪑",
+      title: "Nội thất phòng ăn",
+      value: "noi-that",
+      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+    },
+    {
+      icon: "💡",
+      title: "Đèn chiếu sáng",
+      value: "den",
+      gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+    },
+    {
+      icon: "🍳",
+      title: "Thiết bị nhà bếp",
+      value: "bep",
+      gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+    },
+    {
+      icon: "🛏️",
+      title: "Nội thất phòng ngủ",
+      value: "phong-ngu",
+      gradient: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)",
+    },
   ];
 
   return (
@@ -102,13 +131,17 @@ const Home = () => {
               </div>
 
               <h1 className="display-2 fw-bold text-white mb-4 hero-title">
-                Biến Ngôi Nhà<br />
+                Biến Ngôi Nhà
+                <br />
                 Thành <span className="text-gradient">Thiên Đường</span>
               </h1>
 
-              <p className="lead text-white mb-4 fs-4" style={{ opacity: 0.95 }}>
-                Khám phá bộ sưu tập đồ gia dụng và nội thất cao cấp với thiết kế hiện đại,
-                chất lượng vượt trội và giá cả hợp lý nhất thị trường.
+              <p
+                className="lead text-white mb-4 fs-4"
+                style={{ opacity: 0.95 }}
+              >
+                Khám phá bộ sưu tập đồ gia dụng và nội thất cao cấp với thiết kế
+                hiện đại, chất lượng vượt trội và giá cả hợp lý nhất thị trường.
               </p>
 
               <div className="hero-stats mb-5">
@@ -129,10 +162,16 @@ const Home = () => {
               </div>
 
               <div className="d-flex gap-3 flex-wrap">
-                <a href="#products" className="btn btn-light btn-lg px-5 rounded-pill shadow-lg">
+                <a
+                  href="#products"
+                  className="btn btn-light btn-lg px-5 rounded-pill shadow-lg"
+                >
                   <span className="me-2">🛍️</span> Mua sắm ngay
                 </a>
-                <a href="#categories" className="btn btn-outline-light btn-lg px-5 rounded-pill">
+                <a
+                  href="#categories"
+                  className="btn btn-outline-light btn-lg px-5 rounded-pill"
+                >
                   <span className="me-2">📦</span> Khám phá
                 </a>
               </div>
@@ -217,13 +256,18 @@ const Home = () => {
               Danh Mục Sản Phẩm
             </span>
             <h2 className="display-5 fw-bold mb-3">Khám Phá Theo Danh Mục</h2>
-            <p className="text-muted fs-5">Tìm kiếm sản phẩm phù hợp với không gian của bạn</p>
+            <p className="text-muted fs-5">
+              Tìm kiếm sản phẩm phù hợp với không gian của bạn
+            </p>
           </div>
 
           <div className="row g-4">
             {categories.map((category, index) => (
               <div key={index} className="col-6 col-md-4 col-lg-2">
-                <div className="category-card-modern h-100" style={{ background: category.gradient }}>
+                <div
+                  className="category-card-modern h-100"
+                  style={{ background: category.gradient }}
+                >
                   <div className="category-icon-modern">{category.icon}</div>
                   <h6 className="text-white fw-bold mb-0">{category.title}</h6>
                 </div>
@@ -241,7 +285,9 @@ const Home = () => {
               ⭐ Sản Phẩm Nổi Bật
             </span>
             <h2 className="display-5 fw-bold mb-3">Bán Chạy Nhất Tháng</h2>
-            <p className="text-muted fs-5">Được yêu thích bởi hàng ngàn khách hàng</p>
+            <p className="text-muted fs-5">
+              Được yêu thích bởi hàng ngàn khách hàng
+            </p>
           </div>
 
           {/* Search & Filter */}
@@ -288,7 +334,7 @@ const Home = () => {
 
           {/* Products Grid */}
           <div className="row g-4 mb-5">
-            {products.map(product => (
+            {products.map((product) => (
               <div key={product.id} className="col-sm-6 col-lg-4 col-xl-3">
                 <div className="product-card-modern">
                   <div className="product-image-wrapper">
@@ -296,7 +342,8 @@ const Home = () => {
                       src={product.image}
                       alt={product.name}
                       onError={(e) => {
-                        e.target.src = 'https://via.placeholder.com/300x300?text=No+Image';
+                        e.target.src =
+                          "https://via.placeholder.com/300x300?text=No+Image";
                       }}
                     />
                     {product.stock < 10 && (
@@ -315,11 +362,13 @@ const Home = () => {
                   </div>
 
                   <div className="product-info-modern">
-                    <span className="badge bg-light text-muted mb-2">{product.category}</span>
+                    <span className="badge bg-light text-muted mb-2">
+                      {product.category}
+                    </span>
                     <h6 className="fw-bold mb-2">{product.name}</h6>
                     <div className="d-flex align-items-center justify-content-between mb-3">
                       <span className="h5 text-primary fw-bold mb-0">
-                        {product.price.toLocaleString('vi-VN')}₫
+                        {product.price.toLocaleString("vi-VN")}₫
                       </span>
                       <div className="text-warning small">
                         ⭐⭐⭐⭐⭐ <span className="text-muted">(4.8)</span>
@@ -350,7 +399,8 @@ const Home = () => {
               <span className="fs-1 mb-4 d-block">📧</span>
               <h2 className="display-5 fw-bold mb-3">Đăng Ký Nhận Ưu Đãi</h2>
               <p className="lead mb-4 opacity-90">
-                Nhận mã giảm giá <strong>100K</strong> cho đơn hàng đầu tiên và cập nhật sản phẩm mới nhất
+                Nhận mã giảm giá <strong>100K</strong> cho đơn hàng đầu tiên và
+                cập nhật sản phẩm mới nhất
               </p>
 
               <div className="row g-2 justify-content-center">

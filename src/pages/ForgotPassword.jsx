@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./Login.css"; // Dùng CSS từ Login để style giống
+import "../styles/Login.css";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");

@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import "./Feedback.css";
+import "../styles/Feedback.css";
 import { useAuth } from "../context/AuthContext";
 
 const STORAGE_KEY = "hl_feedback";
@@ -49,7 +49,9 @@ const StarRating = ({ value, onChange }) => {
           onMouseLeave={() => setHover(0)}
         />
       ))}
-      <span className="stars-label">{value ? `${value}/5` : "Chưa đánh giá"}</span>
+      <span className="stars-label">
+        {value ? `${value}/5` : "Chưa đánh giá"}
+      </span>
     </div>
   );
 };
@@ -92,8 +94,10 @@ const Feedback = () => {
     const e = {};
     if (!form.name.trim()) e.name = "Vui lòng nhập tên.";
     if (!form.email.trim()) e.email = "Vui lòng nhập email.";
-    else if (!/^\S+@\S+\.\S+$/.test(form.email)) e.email = "Email không hợp lệ.";
-    if (!form.rating || form.rating < 1) e.rating = "Vui lòng chọn số sao (1-5).";
+    else if (!/^\S+@\S+\.\S+$/.test(form.email))
+      e.email = "Email không hợp lệ.";
+    if (!form.rating || form.rating < 1)
+      e.rating = "Vui lòng chọn số sao (1-5).";
     if (!form.message.trim()) e.message = "Vui lòng nhập nội dung.";
     setErrors(e);
     return Object.keys(e).length === 0;
@@ -147,7 +151,9 @@ const Feedback = () => {
             <input
               type="email"
               value={form.email}
-              onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+              onChange={(e) =>
+                setForm((f) => ({ ...f, email: e.target.value }))
+              }
               placeholder="email@domain.com"
               readOnly={!!user?.email}
               className={errors.email ? "invalid" : ""}
@@ -167,13 +173,17 @@ const Feedback = () => {
             <textarea
               rows={4}
               value={form.message}
-              onChange={(e) => setForm((f) => ({ ...f, message: e.target.value }))}
+              onChange={(e) =>
+                setForm((f) => ({ ...f, message: e.target.value }))
+              }
               placeholder="Chia sẻ trải nghiệm của bạn..."
               className={errors.message ? "invalid" : ""}
             />
             {errors.message && <div className="error">{errors.message}</div>}
           </div>
-          <button type="submit" className="btn-primary">Gửi feedback</button>
+          <button type="submit" className="btn-primary">
+            Gửi feedback
+          </button>
         </form>
       </section>
 
@@ -196,7 +206,9 @@ const Feedback = () => {
               <li key={it.id} className="feedback-item">
                 <div className="item-head">
                   <div className="who">
-                    <div className="avatar">{it.name.charAt(0).toUpperCase()}</div>
+                    <div className="avatar">
+                      {it.name.charAt(0).toUpperCase()}
+                    </div>
                     <div>
                       <div className="name">{it.name}</div>
                       <div className="email">{it.email}</div>
