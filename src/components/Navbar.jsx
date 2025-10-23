@@ -37,7 +37,11 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger */}
-        <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+        <button
+          className="menu-toggle"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
           <span className={isMenuOpen ? "active" : ""}></span>
           <span className={isMenuOpen ? "active" : ""}></span>
           <span className={isMenuOpen ? "active" : ""}></span>
@@ -45,11 +49,25 @@ const Navbar = () => {
 
         {/* Menu trái */}
         <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
-          <li><Link to="/">Trang chủ</Link></li>
-          <li><a href="#products">Sản phẩm</a></li>
-          <li><a href="#categories">Danh mục</a></li>
-          <li><a href="#about">Giới thiệu</a></li>
-          <li><a href="#contact">Liên hệ</a></li>
+          <li>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>Trang chủ</Link>
+          </li>
+          <li>
+            <a href="#products" onClick={() => setIsMenuOpen(false)}>Sản phẩm</a>
+          </li>
+          <li>
+            <a href="#categories" onClick={() => setIsMenuOpen(false)}>Danh mục</a>
+          </li>
+          <li>
+            <a href="#about" onClick={() => setIsMenuOpen(false)}>Giới thiệu</a>
+          </li>
+          <li>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)}>Liên hệ</a>
+          </li>
+          {/* ✅ Link Feedback */}
+          <li>
+            <Link to="/feedback" onClick={() => setIsMenuOpen(false)}>Feedback</Link>
+          </li>
         </ul>
 
         {/* Icons + Tài khoản */}
@@ -67,10 +85,18 @@ const Navbar = () => {
               </button>
               {openProfile && (
                 <div className="profile-menu right">
-                  <Link className="menu-item" to="/login" onClick={() => setOpenProfile(false)}>
+                  <Link
+                    className="menu-item"
+                    to="/login"
+                    onClick={() => setOpenProfile(false)}
+                  >
                     Đăng nhập
                   </Link>
-                  <Link className="menu-item" to="/register" onClick={() => setOpenProfile(false)}>
+                  <Link
+                    className="menu-item"
+                    to="/register"
+                    onClick={() => setOpenProfile(false)}
+                  >
                     Đăng ký
                   </Link>
                 </div>
@@ -83,7 +109,11 @@ const Navbar = () => {
               </button>
               {openProfile && (
                 <div className="profile-menu right">
-                  <Link className="menu-item" to="/settings" onClick={() => setOpenProfile(false)}>
+                  <Link
+                    className="menu-item"
+                    to="/settings"
+                    onClick={() => setOpenProfile(false)}
+                  >
                     Thông tin & Cài đặt
                   </Link>
 

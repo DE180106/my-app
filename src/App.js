@@ -11,6 +11,7 @@ import Settings from "./components/Settings";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Admin from "./pages/Admin";
+import Feedback from "./pages/Feedback";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
               <Route path="/settings" element={<Settings />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/feedback" element={<Feedback />} />
               <Route
                 path="/reset-password/:token"
                 element={<ResetPassword />}

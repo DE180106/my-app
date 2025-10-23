@@ -1,0 +1,135 @@
+.feedback-page.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.feedback-form-card,
+.feedback-list-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.feedback-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.feedback-form label {
+  font-weight: 600;
+}
+.feedback-form input,
+.feedback-form textarea,
+.search {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 10px 12px;
+  outline: none;
+}
+.feedback-form input.invalid,
+.feedback-form textarea.invalid {
+  border-color: #ff6b6b;
+}
+.error {
+  color: #ff4757;
+  font-size: 13px;
+}
+
+.btn-primary {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-primary:hover { filter: brightness(0.95); }
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.stars-label {
+  margin-left: 6px;
+  font-size: 14px;
+  color: #666;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.search {
+  min-width: 260px;
+}
+
+.muted { color: #888; }
+
+.feedback-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.feedback-item {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 12px;
+}
+.item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-weight: 800;
+}
+.name { font-weight: 700; }
+.email { color: #666; font-size: 13px; }
+.message { margin: 8px 0 6px; line-height: 1.5; }
+.item-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666;
+  font-size: 13px;
+}
+.btn-link {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn-link.danger { color: #ef4444; }
