@@ -2,163 +2,184 @@
   "products": [
     {
       "id": "p1",
-      "name": "Ấm đun siêu tốc Inox 1.8L",
-      "price": 259000,
-      "image": "https://picsum.photos/seed/p1/600/600",
+      "name": "Bình đun siêu tốc Sunhouse 1.8 lít SHD1182",
+      "price": 170000,
+      "image": "https://images.weserv.nl/?url=cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/157/10024544-binh-dun-sieu-toc-sunhouse-1-8-lit-shd1182.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Đồ điện gia dụng",
-      "stock": 25
+      "stock": 25,
+      "description": "Bình đun siêu tốc Sunhouse 1.8 lít SHD1182 sở hữu dung tích lớn lên đến 1.8L..."
     },
     {
       "id": "p2",
-      "name": "Quạt đứng 5 cánh 45W",
-      "price": 499000,
-      "image": "https://picsum.photos/seed/p2/600/600",
+      "name": "Quạt cây đứng Philips CX1220/00 45W",
+      "price": 990000,
+      "image": "https://images.weserv.nl/?url=quatviet.net/wp-content/uploads/2025/05/Quat-cay-dung-Philips-CX1220-45W-6.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Thiết bị làm mát",
-      "stock": 8
+      "stock": 8,
+      "description": "Quạt cây đứng Philips CX1220/00 công suất 45W..."
     },
     {
       "id": "p3",
-      "name": "Bộ bàn ăn 4 ghế gỗ sồi",
-      "price": 3599000,
-      "image": "https://picsum.photos/seed/p3/600/600",
+      "name": "Bộ bàn ăn 4 ghế gỗ sồi nga",
+      "price": 3850000,
+      "image": "https://images.weserv.nl/?url=bizweb.dktcdn.net/thumb/1024x1024/100/358/409/products/soi-61-2.jpg%3Fv%3D1638416044220&w=600&h=600&fit=cover&q=70",
       "category": "Nội thất phòng ăn",
-      "stock": 4
+      "stock": 4,
+      "description": "Chất liệu bàn ăn gỗ sồi Nga là Gỗ sồi nhập khẩu, mặt kính dày 8mm.\nKích thước: 1200 x 700 x 750 mm.\nMàu sắc: Vàng.\nĐộ mới 100% chưa qua sử dụng."
     },
     {
       "id": "p4",
-      "name": "Đèn bàn LED chống cận",
-      "price": 189000,
-      "image": "https://picsum.photos/seed/p4/600/600",
+      "name": "Đèn LED Bàn Học Chống Cận 5W RD-RL-01.V2",
+      "price": 135850,
+      "image": "https://images.weserv.nl/?url=static.rangdongstore.vn/product/den-ban/RD-RL-01.V2/RD-RL-27.V2-1.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Đèn chiếu sáng",
-      "stock": 40
+      "stock": 40,
+      "description": "Ánh sáng: Ánh sáng vàng 3000K.\nMàu sắc: Đỏ cờ.\nCông suất: 5W.\nĐiện áp: 220V/50Hz.\nĐộ rọi: 700 lux.\nNhiệt độ màu: 3000K, 6500K.\nTuổi thọ: 20.000 giờ"
     },
     {
       "id": "p5",
-      "name": "Chảo chống dính 28cm",
+      "name": "Chảo chống dính Sunhouse SFP28B 28cm",
       "price": 299000,
-      "image": "https://picsum.photos/seed/p5/600/600",
+      "image": "https://images.weserv.nl/?url=sunhouseviet.com/wp-content/uploads/2018/11/Ch%E1%BA%A3o-ch%E1%BB%91ng-d%C3%ADnh-Sunhouse-SFP28B-28cm-1.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Thiết bị nhà bếp",
-      "stock": 17
+      "stock": 17,
+      "description": "Chảo chống dính Sunhouse SFP28B 28cm được làm bằng hợp kim nhôm cao cấp siêu bền giúp truyền nhiệt nhanh.\nChảo được phủ chống dính vân đá an toàn cho sức khỏe.\nTay cầm nhựa Bakelit bắt vít chắc chắn.\nBề mặt sơn tĩnh điện màu đỏ/xanh chống trầy xước, dễ vệ sinh.\nDùng được: bếp hồng ngoại, bếp từ, bếp gas,…"
     },
     {
       "id": "p6",
-      "name": "Bộ ga giường cotton 1m6",
+      "name": "Bộ ga chun chần ESM22002",
       "price": 459000,
-      "image": "https://picsum.photos/seed/p6/600/600",
+      "image": "https://images.weserv.nl/?url=everon.com/upload/upload-images/bo-ga-trai-giuong-1m6-2.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Nội thất phòng ngủ",
-      "stock": 12
+      "stock": 12,
+      "description": "Bộ ga chun chần ESM22002 gồm 1 ga chun + 2 vỏ gối 45x65cm.\nChất liệu vải modal tự nhiên, mềm mịn, thoáng mát và thấm hút tốt."
     },
     {
       "id": "p7",
-      "name": "Máy xay sinh tố 600W",
+      "name": "Máy xay sinh tố Lock&Lock EJM361SLV (1.5L – 600W)",
       "price": 749000,
-      "image": "https://picsum.photos/seed/p7/600/600",
+      "image": "https://images.weserv.nl/?url=locknlockvietnam.com.vn/wp-content/uploads/2021/08/may-xay-sinh-t-lock-lock-ejm361slv-600w-b-c.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Đồ điện gia dụng",
-      "stock": 6
+      "stock": 6,
+      "description": "Công suất: 600W\nDung tích cối: 1.5L\nLưỡi dao inox 304 sắc bén, 6 cánh\nNhiều chế độ xay, có bảo vệ quá nhiệt"
     },
     {
       "id": "p8",
-      "name": "Kệ sách gỗ 4 tầng",
+      "name": "Kệ gỗ – Sách 4 tầng 60cm",
       "price": 690000,
-      "image": "https://picsum.photos/seed/p8/600/600",
+      "image": "https://images.weserv.nl/?url=product.hstatic.net/1000310803/product/4t601_master.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Nội thất",
-      "stock": 21
+      "stock": 21,
+      "description": "Thương hiệu: ASAKA\nKích thước: Rộng 60 × Cao 120 × Sâu 28 cm\nMàu sắc: Nâu\nChất liệu: Gỗ cao su tự nhiên\nBảo hành: 365 ngày"
     },
     {
       "id": "p9",
-      "name": "Máy lọc không khí thông minh",
+      "name": "Máy lọc không khí thông minh FujiE AP200",
       "price": 1890000,
-      "image": "https://picsum.photos/seed/p9/600/600",
+      "image": "https://images.weserv.nl/?url=fujie.com.vn/image/cache/catalog/may-loc-kk-fujie/ap-200-new/ap-200-1-800x800.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Thiết bị làm mát",
-      "stock": 15
+      "stock": 15,
+      "description": "Màng lọc nano E2F độc quyền, hiệu suất lọc 99.99% bụi mịn.\nLọc từ PM2.5 tới hạt ~0.1µm; 4 cấp lọc.\nKích thước nhỏ gọn, phù hợp phòng ngủ/phòng làm việc.\nVận hành êm, không gian yên tĩnh."
     },
     {
       "id": "p10",
-      "name": "Bàn làm việc gỗ công nghiệp",
+      "name": "Bàn làm việc gỗ AT140SK",
       "price": 1290000,
-      "image": "https://picsum.photos/seed/p10/600/600",
+      "image": "https://images.weserv.nl/?url=noithathoaphat.com.vn/product_images/z/539/ban-lam-viec-go-AT140SK__74136_zoom.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Nội thất phòng ăn",
-      "stock": 10
+      "stock": 10,
+      "description": "Mặt bàn và chân bàn liên kết bằng ke nhựa; chân gỗ đệm nhựa chịu lực.\nYếm lửng thẳng, phù hợp ghế văn phòng/ghế lưới/ghế xoay.\nTạo không gian làm việc hiện đại cho nhân viên."
     },
+
     {
       "id": "p11",
-      "name": "Đèn ngủ cảm biến ánh sáng",
-      "price": 159000,
-      "image": "https://picsum.photos/seed/p11/600/600",
+      "name": "Đèn Ngủ Cảm Biến 0.3W ĐN02.LS 65x65",
+      "price": 107000,
+      "image": "https://images.weserv.nl/?url=https://static.rangdongstore.vn/product/Den-LED/den-ngu-cam-bien/DN02-1.jpg?fm=webp&w=500&w=600&h=600&fit=cover&q=70",
       "category": "Đèn chiếu sáng",
-      "stock": 35
+      "stock": 35,
+      "description": "Đèn tích hợp cảm biến ánh sáng hoạt động với 2 chế độ: \nChế độ On: Đèn luôn sáng sau khi cấp nguồn.\nChế độ Auto: Đèn chỉ sáng khi cấp nguồn và cường độ ánh sáng <15 lux.\nỨng dụng: Sử dụng làm đèn ngủ, đèn chiếu sáng chân tường,..."
     },
     {
       "id": "p12",
-      "name": "Nồi chiên không dầu 4L",
-      "price": 999000,
-      "image": "https://picsum.photos/seed/p12/600/600",
+      "name": "Nồi chiên không dầu Ferroli FAF-4.0M (4L - điều khiển cơ)",
+      "price": 1400000,
+      "image": "https://images.weserv.nl/?url=https://ferroli.com.vn/wp-content/uploads/2022/12/FAF-4.0M.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Thiết bị nhà bếp",
-      "stock": 9
+      "stock": 9,
+      "description": "Nồi chiên không dầu Ferroli 4 lít FAF-4.0M sở hữu thiết kế gọn gàng với vỏ ngoài bằng nhựa ABS an toàn bền bỉ và gam màu đen sang trọng góp phần tô điểm cho căn bếp gia đình thêm hiện đại. Với dung tích 4 lít, chiếc nồi chiên không dầu này sẽ đáp ứng tốt nhu cầu sử dụng cho gia đình từ 4 - 6 thành viên."
     },
     {
       "id": "p13",
-      "name": "Bộ chăn ga gối satin cao cấp",
-      "price": 790000,
-      "image": "https://picsum.photos/seed/p13/600/600",
+      "name": "Bộ ga phủ chăn chần Amando thêu cotton satin màu tím",
+      "price": 3263700,
+      "image": "https://images.weserv.nl/?url=https://cdn-cf-ops.vuanem.com/1468x1468,,q100/https://vuanem.com/storage/products/1543/U8zABASmoKg2ebLlda5B6rSZZPwB5TH9dYRdM46x.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Nội thất phòng ngủ",
-      "stock": 13
+      "stock": 13,
+      "description": "Bộ ga phủ chăn chần từ chất liệu cotton satin bóng mượt êm ái, mịn mát như lụa với họa tiết thêu tinh tế, trang nhã.\n- Chất liệu:\n+ Cotton satin\n+ Ruột chăn từ sợi bông tự nhiên\n- Họa tiết: hoa thêu.\n- Bộ sản phẩm bao gồm:\n+ 01 ga phủ chần\n+ 01 vỏ chăn chần \n+ 02 vỏ gối nằm\n+ 01 vỏ gối ôm"
     },
     {
       "id": "p14",
-      "name": "Tủ gỗ đa năng 4 ngăn kéo",
-      "price": 1450000,
-      "image": "https://picsum.photos/seed/p14/600/600",
+      "name": "Tủ Áo Quần Gỗ Sồi Tự Nhiên 3 Buồng 4 Cánh Bền Đẹp Giá Rẻ",
+      "price": 8490000,
+      "image": "https://images.weserv.nl/?url=https://noithatdogoviet.com/upload/sanpham/large/tu-ao-quan-go-soi-tu-nhien-3-buong-4-canh-ben-dep-gia-re941974-canh-2.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Nội thất phòng ăn",
-      "stock": 6
+      "stock": 6,
+      "description": "Tủ treo áo quần sở hữu thiết kế tiện lợi gồm 3 buồng treo rộng rãi, 2 ngăn xếp gọn gàng, 1 hộc kéo âm chuyên dụng. Với khả năng tùy biến một cách linh hoạt sản phẩm được xem là một trong những mẫu nội thất phòng ngủ được xem là giải pháp tối ưu cho những gia đình có đông thành viên sử dụng, giúp mọi người sắp xếp đồ dùng một cách gọn gàng nhất.\nKết cấu tủ áo gỗ sồi thiết kế theo kiểu dáng hiện đại dạng hình chữ nhật vuông với các góc cạnh vuông vắn giúp tiết kiệm không gian một cách hiệu quả nhất. Vai tủ, cạnh tủ, đỉnh tủ, đáy tủ được làm đều nhau với độ dày tấm gỗ ~5cm đảm bảo độ bền. Các chi tiết được hoàn thiện liền mạch & đồng đều với nhau, giúp việc tháo lắp dễ dàng nhanh chóng hơn.\nTủ áo sử dụng chất liệu gỗ sồi Nga nhập khẩu để chế tác với ưu điểm là màu sắc sáng, vân gỗ tự nhiên đẹp. Đặc biệt là phấn cánh tủ với 4 cánh lớn được làm từ những tấm gỗ lớn có màu vân đồng đều nhau, tạo nên nét đẹp tự nhiên, mộc mạc cho sản phẩm.\nPhụ kiện tủ gỗ treo áo quần gồm tay nắm mở tủ, thanh treo áo quần, khay kệ tủ đều được làm từ gỗ sồi 100%, giữ cho chất lượng tủ được ổn định tốt theo thời gian dài sử dụng. Các phụ kiện nhỏ như khóa tủ, bản lề…. làm từ inox không gỉ chất lượng cao, đảm bảo khách hàng không phải thay mới trong thời gian từ 10 – 20 năm."
     },
     {
       "id": "p15",
-      "name": "Quạt điều hòa 30L công suất lớn",
-      "price": 2890000,
-      "image": "https://picsum.photos/seed/p15/600/600",
+      "name": "Quạt hơi nước SNK-111",
+      "price": 4120000,
+      "image": "https://images.weserv.nl/?url=https://sanakyvietnam.net/wp-content/uploads/quat-hoi-nuoc-snk-111.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Thiết bị làm mát",
-      "stock": 7
+      "stock": 7,
+      "description": "Đặc điểm nổi bật:\nCông suất 3000 m3/h cực khỏe\nDung tích bình chứa 30L\nLọc không khí hiệu quả\nBa cấp độ gió linh hoạt\nTự động đảo trái phải tiện ích"
     },
     {
       "id": "p16",
-      "name": "Máy pha cà phê mini",
-      "price": 1250000,
-      "image": "https://picsum.photos/seed/p16/600/600",
+      "name": "Máy pha cà phê Delonghi ECP31.21 1.1 lít 1100W",
+      "price": 3990000,
+      "image": "https://images.weserv.nl/?url=https://cdn11.dienmaycholon.vn/filewebdmclnew/DMCL21/Picture//Apro/Apro_product_26206/may-pha-ca-phe-delonghi-ecp3121-11-lit-1100w-main-26206.png&w=600&h=600&fit=cover&q=70",
       "category": "Thiết bị nhà bếp",
-      "stock": 20
+      "stock": 20,
+      "description": "Tính năng nổi bật:\nHệ thống cappuccino chức năng đun nóng\nHệ thống tự động tắt sau 9 phút không sử dụng\nNồi hơi bằng thép không gỉ\nTay cầm inox chắc chắn, sang trọng\nBình nước dung tích 1.1l"
     },
     {
       "id": "p17",
-      "name": "Bàn ăn kính cường lực 6 ghế",
-      "price": 5690000,
-      "image": "https://picsum.photos/seed/p17/600/600",
+      "name": "Bộ bàn ăn gỗ sồi mặt kính 6 ghế GS6",
+      "price": 8500000,
+      "image": "https://images.weserv.nl/?url=https://chonoithathaiphong.vn/wp-content/uploads/2021/07/bo-ban-an-go-soi-mat-kinh-6-ghe-02.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Nội thất phòng ăn",
-      "stock": 4
+      "stock": 4,
+      "description": "Kích thước:\nDài : 1m6\nRộng : 80cm\nCao : 75cm\nChất liệu : gỗ sồi\nBộ bàn ăn gỗ sồi kích thước lớn được sơn màu đen trên nền vân gỗ tự nhiên. Bàn thiết kế theo dạng mango chân choãi. Bề mặt bàn làm từ tấm gố đặc có bề mặt phủ kính sạch sẽ. Chân bàn và chân ghế làm dạng vuông chắc chắn."
     },
     {
       "id": "p18",
-      "name": "Đèn LED trần nhà cảm biến",
-      "price": 490000,
-      "image": "https://picsum.photos/seed/p18/600/600",
+      "name": "Đèn LED Ốp Trần Mỏng Tròn Cảm Biến 18W D LN11L 220/18W.PIR",
+      "price": 313170,
+      "image": "https://images.weserv.nl/?url=https://denrangdongstore.com/wp-content/uploads/2019/11/den-led-op-tran-mong-tron-cam-bien-18w.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Đèn chiếu sáng",
-      "stock": 22
+      "stock": 22,
+      "description": "Đèn Led Ốp Trần Mỏng Tròn Cảm Biến 18w Rạng Đông là đèn led ốp nổi trần hình tròn. Đèn ốp nổi 18w cảm biến rạng đông được sử dụng chip led Samsung thế hệ mới nhất. Đèn Ốp Nổi Tròn Cảm Biến có ánh sáng chiếu tỏa, 3000k vàng, 4000k trung tính, 6000k trắng. Đèn Ốp Trần Cảm Biến siêu sáng tích hợp cảm biến hồng ngoại, chuyển động. Đèn Cảm Biến kiểu dáng hiện đại, khỏe khoắn và dễ lắp đặt, bộ phận tản nhiệt tốt."
     },
     {
       "id": "p19",
-      "name": "Máy sấy tóc công suất cao",
-      "price": 299000,
-      "image": "https://picsum.photos/seed/p19/600/600",
+      "name": "Máy sấy tóc 1900 - 2300W BlueStone HDB-1958",
+      "price": 670000,
+      "image": "https://images.weserv.nl/?url=https://cdn.tgdd.vn/Products/Images/1991/230381/bluestone-hdb-1958-1-4-700x467.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Đồ điện gia dụng",
-      "stock": 25
+      "stock": 25,
+      "description": "Máy sấy tóc BlueStone HDB-1958 với thân máy bằng nhựa cao cấp nhẹ bền, ít bám bẩn, dễ lau chùi.Thiết kế nhỏ gọn giúp bạn dễ dàng bảo quản và mang theo máy sấy bên mình khi đi du lịch, công tác,…"
     },
     {
       "id": "p20",
-      "name": "Giường ngủ gỗ sồi 1m8",
-      "price": 4990000,
-      "image": "https://picsum.photos/seed/p20/600/600",
+      "name": "Giường Ngủ Gỗ Sồi 1m8 Dát Phản GN23",
+      "price": 5500000,
+      "image": "https://images.weserv.nl/?url=https://noithattrongsang.com/images/san_pham/giuong-ngu-go-thit-tu-nhien_8.jpg&w=600&h=600&fit=cover&q=70",
       "category": "Nội thất phòng ngủ",
-      "stock": 5
+      "stock": 5,
+      "description": "Giá đã bao gồm vận chuyển và lắp đặt miễn phí"
     }
   ]
 }

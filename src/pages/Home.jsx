@@ -3,6 +3,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useAuth } from "../context/AuthContext";
 import "../styles/Home.css";
 import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 const API_URL = "http://localhost:9999/products"; // ✅ json-server cách B
 
@@ -18,6 +19,7 @@ const normalizeVN = (str = "") =>
 const Home = () => {
   const { user } = useAuth();
   const { addItem } = useCart();
+  const navigate = useNavigate();
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -400,6 +402,8 @@ const Home = () => {
                           e.currentTarget.src =
                             "https://via.placeholder.com/300x300?text=No+Image";
                         }}
+                        onClick={() => navigate(`/product/${product.id}`)}
+                        style={{ cursor: "pointer" }}
                       />
                       {product.stock < 10 && (
                         <span className="badge bg-danger position-absolute top-0 end-0 m-3">
@@ -412,7 +416,13 @@ const Home = () => {
                       <span className="badge bg-light text-muted mb-2">
                         {product.category}
                       </span>
-                      <h6 className="fw-bold mb-2">{product.name}</h6>
+                      <h6
+                        className="fw-bold mb-2"
+                        onClick={() => navigate(`/product/${product.id}`)}
+                        style={{ cursor: "pointer" }}
+                      >
+                        {product.name}
+                      </h6>
                       <div className="d-flex align-items-center justify-content-between mb-3">
                         <span className="h5 text-primary fw-bold mb-0">
                           {product.price.toLocaleString("vi-VN")}₫

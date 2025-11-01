@@ -14,6 +14,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
 import Admin from "./pages/Admin";
 import Feedback from "./pages/Feedback";
+import ProductDetail from "./pages/ProductDetail";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/feedback" element={<Feedback />} />
+                <Route path="/product/:id" element={<ProductDetail />} />
                 <Route
                   path="/reset-password/:token"
                   element={<ResetPassword />}
