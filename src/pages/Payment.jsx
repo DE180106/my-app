@@ -1,24 +1,22 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useCart } from "../context/CartContext";
-import { useAuth } from "../context/AuthContext"; // ✅ thêm
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // 🔹 Dùng để điều hướng
 import "../styles/Payment.css";
 
 export default function Payment() {
   const navigate = useNavigate();
   const { items, subtotal, addItem, decreaseItem, removeItem, clearCart } =
     useCart();
-  const { user } = useAuth(); // ✅ lấy thông tin người đăng nhập
 
   const taxRate = 0.1;
   const tax = subtotal * taxRate;
 
-  // map phí ship
+  // 🔹 map phí ship cho từng sản phẩm
   const [shippingMap, setShippingMap] = useState(() =>
     Object.fromEntries(items.map((i) => [i.id, 0]))
   );
 
-  // đồng bộ shippingMap khi giỏ thay đổi
+  // 🔹 đồng bộ shippingMap khi giỏ thay đổi
   useEffect(() => {
     setShippingMap((prev) => {
       const next = { ...prev };
@@ -30,6 +28,7 @@ export default function Payment() {
     });
   }, [items]);
 
+  // 🔹 tổng phí vận chuyển
   const shippingTotal = useMemo(
     () => items.reduce((s, it) => s + (shippingMap[it.id] || 0), 0),
     [items, shippingMap]
@@ -40,12 +39,8 @@ export default function Payment() {
   const formatVND = (n) =>
     (n || 0).toLocaleString("vi-VN", { style: "currency", currency: "VND" });
 
-  // ✅ Khi nhấn “Đặt hàng ngay”
+  // 🔹 Khi nhấn “Đặt hàng ngay”
   const handlePlaceOrder = () => {
-    if (!user) {
-      alert("⚠️ Vui lòng đăng nhập trước khi đặt hàng!");
-      return;
-    }
     if (items.length === 0) {
       alert("🛒 Giỏ hàng của bạn đang trống!");
       return;
@@ -61,16 +56,15 @@ export default function Payment() {
       items,
     };
 
-    // ✅ Lưu đơn hàng theo từng user riêng biệt
-    const userKey = `orders_${user.email}`;
-    const existing = JSON.parse(localStorage.getItem(userKey) || "[]");
-    localStorage.setItem(userKey, JSON.stringify([order, ...existing]));
+    // ✅ Lưu vào localStorage
+    const existing = JSON.parse(localStorage.getItem("orders") || "[]");
+    localStorage.setItem("orders", JSON.stringify([order, ...existing]));
 
     alert(
       "🎉 Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại HomeLiving Store!"
     );
     clearCart();
-    navigate("/your-orders");
+    navigate("/your-orders"); // ✅ Chuyển hướng sang trang Your Orders
   };
 
   return (
@@ -96,6 +90,7 @@ export default function Payment() {
                   <h5>{item.name}</h5>
                   <p className="price text-danger">{formatVND(item.price)}</p>
 
+                  {/* Nhóm tăng giảm số lượng */}
                   <div className="quantity-control">
                     <button
                       className="qty-btn"
