@@ -146,6 +146,16 @@ const Navbar = () => {
                     >
                       Thông tin & Cài đặt
                     </Link>
+
+                    {/* ✅ Nút lịch sử đặt hàng */}
+                    <Link
+                      className="menu-item"
+                      to="/your-orders"
+                      onClick={() => setOpenProfile(false)}
+                    >
+                      🧾 Lịch sử đặt hàng
+                    </Link>
+
                     {user?.role === "admin" && (
                       <Link
                         className="menu-item"
@@ -155,6 +165,7 @@ const Navbar = () => {
                         Quản lý
                       </Link>
                     )}
+
                     <button className="menu-item danger" onClick={handleLogout}>
                       Đăng xuất
                     </button>
