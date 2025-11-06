@@ -1,4 +1,38 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin User",
+      "email": "admin@homeliving.vn",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Demo User",
+      "email": "demo@homeliving.vn",
+      "password": "123456",
+      "role": "user"
+    }
+  ],
+
+  "orders": [
+    {
+      "id": "ODR20251107001",
+      "userEmail": "demo@homeliving.vn",
+      "date": "07/11/2025",
+      "total": 299000,
+      "items": [
+        {
+          "id": "p5",
+          "name": "Chảo chống dính Sunhouse SFP28B 28cm",
+          "price": 299000,
+          "qty": 1,
+          "image": "https://images.weserv.nl/?url=sunhouseviet.com/wp-content/uploads/2018/11/Ch%E1%BA%A3o-ch%E1%BB%91ng-d%C3%ADnh-Sunhouse-SFP28B-28cm-1.jpg&w=600&h=600&fit=cover&q=70"
+        }
+      ]
+    }
+  ],
   "products": [
     {
       "id": "p1",

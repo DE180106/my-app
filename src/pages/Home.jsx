@@ -43,35 +43,34 @@ const Home = () => {
    * ánh xạ value của dropdown -> từ khóa để so với product.category
    * (file JSON đang để category là tiếng Việt đầy đủ)
    */
-  const CATEGORY_MATCH = {
-    "": [], // tất cả
-    dien: ["dien", "điện", "gia dung"], // Đồ điện gia dụng
-    mat: ["mat", "mát", "làm mát", "quat", "quạt"],
-    "noi-that": ["noi that", "nội thất"],
-  };
+  // ✨ Gói CATEGORY_MATCH vào useMemo
+  const CATEGORY_MATCH = useMemo(
+    () => ({
+      "": [],
+      dien: ["dien", "điện", "gia dung"],
+      mat: ["mat", "mát", "làm mát", "quat", "quạt"],
+      "noi-that": ["noi that", "nội thất"],
+    }),
+    []
+  );
 
-  // ------- LỌC + SẮP XẾP (tính toán tối ưu bằng useMemo) -------
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const filteredSorted = useMemo(() => {
     const search = normalizeVN(searchTerm);
-
-    // 1) Lọc
     const filtered = products.filter((p) => {
       const nameNorm = normalizeVN(p.name);
       const catNorm = normalizeVN(p.category);
 
-      // Lọc theo search (tên hoặc danh mục)
       const matchSearch =
         !search || nameNorm.includes(search) || catNorm.includes(search);
 
-      // Lọc theo danh mục
       const chosen = CATEGORY_MATCH[selectedCategory] || [];
       const matchCategory =
-        !selectedCategory || chosen.some((kw) => catNorm.includes(kw)); // chỉ cần chứa 1 từ khóa
+        !selectedCategory || chosen.some((kw) => catNorm.includes(kw));
 
       return matchSearch && matchCategory;
     });
 
-    // 2) Sắp xếp
     const sorted = [...filtered].sort((a, b) => {
       switch (sortOption) {
         case "gia-tang":
@@ -86,7 +85,7 @@ const Home = () => {
     });
 
     return sorted;
-  }, [products, searchTerm, selectedCategory, sortOption]);
+  }, [products, searchTerm, selectedCategory, sortOption, CATEGORY_MATCH]);
 
   const categories = [
     {
