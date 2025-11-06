@@ -1,0 +1,117 @@
+.orders-page {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.orders-title {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.order-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.order-header {
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 14px;
+}
+
+.order-body {
+  padding: 15px 20px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.order-item-left img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+.order-item-left h5 {
+  font-size: 15px;
+  margin: 0 0 6px;
+  color: #222;
+}
+
+.order-item-left p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.buy-again-btn {
+  background-color: #ffd814;
+  border: 1px solid #fcd200;
+  padding: 6px 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+}
+
+.buy-again-btn:hover {
+  background-color: #f7ca00;
+}
+
+.order-item-right {
+  text-align: right;
+}
+
+.track-btn {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 7px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.track-btn:hover {
+  background: #f0f0f0;
+}
+
+/* Empty state */
+.orders-empty {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.orders-empty h3 {
+  font-weight: 600;
+  color: #333;
+}

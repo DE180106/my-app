@@ -1,11 +1,18 @@
 // src/components/CartDrawer.jsx
 import React from "react";
 import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom"; // 👈 thêm dòng này
 import "../styles/CartDrawer.css";
 
 export default function CartDrawer({ isOpen, onClose }) {
   const { items, subtotal, addItem, decreaseItem, removeItem, clearCart } =
     useCart();
+  const navigate = useNavigate(); // 👈 tạo navigate
+
+  const handleCheckout = () => {
+    onClose(); // đóng giỏ hàng
+    navigate("/payment"); // chuyển sang trang thanh toán
+  };
 
   return (
     <>
@@ -81,7 +88,12 @@ export default function CartDrawer({ isOpen, onClose }) {
               >
                 Xóa hết
               </button>
-              <button className="btn btn-primary w-50">Thanh toán</button>
+              <button
+                className="btn btn-primary w-50"
+                onClick={handleCheckout} // 👈 thêm event này
+              >
+                Thanh toán
+              </button>
             </div>
           </div>
         )}

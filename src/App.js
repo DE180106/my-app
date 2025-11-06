@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import { AuthProvider } from "./context/AuthContext";
-import { CartProvider } from "./context/CartContext"; // ✅ THÊM DÒNG NÀY
+import { CartProvider } from "./context/CartContext";
 import "./App.css";
 import Settings from "./components/Settings";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -15,28 +15,91 @@ import ResetPassword from "./pages/ResetPassword";
 import Admin from "./pages/Admin";
 import Feedback from "./pages/Feedback";
 import ProductDetail from "./pages/ProductDetail";
+import Payment from "./pages/Payment";
+import YourOrders from "./pages/YourOrders";
+import TrackOrder from "./pages/TrackOrder";
+import ProtectedRoute from "./components/ProtectedRoute"; // ✅ thêm dòng này
 
 const App = () => {
   return (
     <Router>
       <AuthProvider>
-        {/* ✅ BỌC TOÀN BỘ ỨNG DỤNG BẰNG CartProvider */}
         <CartProvider>
           <div className="app-container">
             <Navbar />
             <main className="main-content">
               <Routes>
+                {/* 🌐 Các trang công khai */}
                 <Route path="/" element={<Home />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/settings" element={<Settings />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
-                <Route path="/admin" element={<Admin />} />
-                <Route path="/feedback" element={<Feedback />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
                 <Route
                   path="/reset-password/:token"
                   element={<ResetPassword />}
+                />
+
+                {/* 🔒 Các trang yêu cầu đăng nhập */}
+                <Route
+                  path="/payment"
+                  element={
+                    <ProtectedRoute>
+                      <Payment />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/your-orders"
+                  element={
+                    <ProtectedRoute>
+                      <YourOrders />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/track-order/:id"
+                  element={
+                    <ProtectedRoute>
+                      <TrackOrder />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/track-order/:orderId/:itemId"
+                  element={
+                    <ProtectedRoute>
+                      <TrackOrder />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/feedback"
+                  element={
+                    <ProtectedRoute>
+                      <Feedback />
+                    </ProtectedRoute>
+                  }
+                />
+
+                {/* 👑 Chỉ cho phép admin */}
+                <Route
+                  path="/admin"
+                  element={
+                    <ProtectedRoute role="admin">
+                      <Admin />
+                    </ProtectedRoute>
+                  }
+                />
+
+                {/* ⚙️ User profile */}
+                <Route
+                  path="/settings"
+                  element={
+                    <ProtectedRoute>
+                      <Settings />
+                    </ProtectedRoute>
+                  }
                 />
               </Routes>
             </main>
