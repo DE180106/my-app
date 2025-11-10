@@ -71,16 +71,19 @@ const Navbar = () => {
                 Danh mục
               </a>
             </li>
+
+            {/* 🆕 Thay link Giới thiệu và Liên hệ thành route riêng */}
             <li>
-              <a href="#about" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)}>
                 Giới thiệu
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                 Liên hệ
-              </a>
+              </Link>
             </li>
+
             <li>
               <Link to="/feedback" onClick={() => setIsMenuOpen(false)}>
                 Feedback
@@ -94,7 +97,7 @@ const Navbar = () => {
               🔍
             </a>
 
-            {/* Giỏ hàng: mở Drawer + badge động */}
+            {/* Giỏ hàng */}
             <a
               href="#cart"
               className="icon-link"
@@ -107,7 +110,7 @@ const Navbar = () => {
               🛒 <span className="cart-badge">{totalQty}</span>
             </a>
 
-            {/* KHU VỰC TÀI KHOẢN */}
+            {/* Khu vực tài khoản */}
             {!user ? (
               <div className="account-area">
                 <button className="account-btn" onClick={toggleProfile}>
@@ -147,7 +150,6 @@ const Navbar = () => {
                       Thông tin & Cài đặt
                     </Link>
 
-                    {/* ✅ Nút lịch sử đặt hàng */}
                     <Link
                       className="menu-item"
                       to="/your-orders"

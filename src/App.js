@@ -3,6 +3,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
@@ -31,6 +33,8 @@ const App = () => {
               <Routes>
                 {/* 🌐 Các trang công khai */}
                 <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />}/>
+                <Route path="/contact" element={<Contact/>}/>
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
