@@ -68,7 +68,7 @@ const Register = () => {
       });
       setMessage(" Đăng ký thành công! Hãy đăng nhập.");
       setFormData({ name: "", email: "", password: "", confirmPassword: "" });
-      navigate("/login");
+      navigate("/personal-infor");
     } catch (err) {
       // phòng khi AuthContext vẫn phát hiện trùng
       setMessage(` ${err.message}`);

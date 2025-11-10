@@ -21,6 +21,7 @@ import Payment from "./pages/Payment";
 import YourOrders from "./pages/YourOrders";
 import TrackOrder from "./pages/TrackOrder";
 import ProtectedRoute from "./components/ProtectedRoute"; // ✅ thêm dòng này
+import PersonalInfor from "./pages/PersonalInfor";
 
 const App = () => {
   return (
@@ -33,12 +34,13 @@ const App = () => {
               <Routes>
                 {/* 🌐 Các trang công khai */}
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />}/>
-                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
+                <Route path="/personal-infor" element={<PersonalInfor />} />
                 <Route
                   path="/reset-password/:token"
                   element={<ResetPassword />}

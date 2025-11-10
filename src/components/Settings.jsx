@@ -1,26 +1,41 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
-import "../styles/Settings.css";
+import React, { useEffect, useState } from "react";
+import { Container, Card } from "react-bootstrap";
 
-const Settings = () => {
-  const { user } = useAuth();
-  if (!user) return <Navigate to="/login" replace />;
+export default function Settings() {
+  const [info, setInfo] = useState(null);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("personalInfor");
+    if (stored) setInfo(JSON.parse(stored));
+  }, []);
 
   return (
-    <div style={{ maxWidth: 800, margin: "40px auto", padding: "0 16px" }}>
-      <h2>Thông tin & Cài đặt</h2>
-      <p>
-        <b>Tên:</b> {user.name}
-      </p>
-      <p>
-        <b>Email:</b> {user.email}
-      </p>
-      <p>
-        (Bạn có thể mở rộng trang này: đổi mật khẩu, địa chỉ giao hàng, v.v.)
-      </p>
-    </div>
-  );
-};
+    <Container className="mt-5">
+      <Card className="p-4 shadow-sm">
+        <h3 className="text-primary mb-4 text-center">Thông tin cá nhân</h3>
 
-export default Settings;
+        {info ? (
+          <div>
+            <p>
+              <strong>Họ và tên:</strong> {info.fullName}
+            </p>
+            <p>
+              <strong>Ngày sinh:</strong> {info.birthDate}
+            </p>
+            <p>
+              <strong>Giới tính:</strong> {info.gender}
+            </p>
+            <p>
+              <strong>Số điện thoại:</strong> {info.phone}
+            </p>
+            <p>
+              <strong>Địa chỉ:</strong> {info.address}
+            </p>
+          </div>
+        ) : (
+          <p className="text-muted text-center">Chưa có thông tin cá nhân.</p>
+        )}
+      </Card>
+    </Container>
+  );
+}

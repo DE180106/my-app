@@ -147,7 +147,7 @@ const Navbar = () => {
                       to="/settings"
                       onClick={() => setOpenProfile(false)}
                     >
-                      Thông tin & Cài đặt
+                      Thông tin cá nhân
                     </Link>
 
                     <Link

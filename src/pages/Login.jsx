@@ -14,6 +14,8 @@ const Login = () => {
     setErr("");
     try {
       login(email, password);
+      localStorage.setItem("currentUser", email);
+
       navigate("/", { replace: true });
     } catch (error) {
       setErr(error.message);
