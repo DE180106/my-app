@@ -1,44 +1,55 @@
 .orders-page {
   max-width: 1000px;
-  margin: 30px auto;
-  padding: 10px;
+  margin: 40px auto;
+  padding: 20px;
   font-family: "Poppins", sans-serif;
+  color: #222;
 }
 
 .orders-title {
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #111;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 600;
 }
 
 .order-box {
   border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
   background: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
 .order-header {
-  background: #f7f7f7;
   display: flex;
   justify-content: space-between;
-  padding: 12px 20px;
-  border-bottom: 1px solid #e3e3e3;
-  font-size: 14px;
+  background: #f8f9fa;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+}
+
+.status-tag {
+  background: #007185;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 13px;
 }
 
 .order-body {
-  padding: 15px 20px;
+  padding: 20px;
 }
 
 .order-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid #f0f0f0;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
 }
 
 .order-item:last-child {
@@ -47,71 +58,63 @@
 
 .order-item-left {
   display: flex;
+  gap: 15px;
   align-items: center;
-  gap: 20px;
+  flex: 1;
 }
 
 .order-item-left img {
   width: 100px;
   height: 100px;
   object-fit: contain;
+  border-radius: 10px;
   border: 1px solid #eee;
-  border-radius: 6px;
 }
 
-.order-item-left h5 {
-  font-size: 15px;
-  margin: 0 0 6px;
-  color: #222;
-}
-
-.order-item-left p {
-  margin: 3px 0;
-  font-size: 13px;
-  color: #555;
+.buy-again-btn,
+.track-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+  font-size: 14px;
 }
 
 .buy-again-btn {
-  background-color: #ffd814;
-  border: 1px solid #fcd200;
-  padding: 6px 16px;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 6px;
-  transition: all 0.2s ease;
+  background: #ffd814;
+  color: #222;
+  margin-top: 5px;
 }
 
 .buy-again-btn:hover {
-  background-color: #f7ca00;
-}
-
-.order-item-right {
-  text-align: right;
+  background: #f7ca00;
 }
 
 .track-btn {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 7px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 500;
-  transition: all 0.2s ease;
+  background: #007185;
+  color: white;
 }
 
 .track-btn:hover {
-  background: #f0f0f0;
+  background: #005d67;
 }
 
-/* Empty state */
+.order-footer {
+  background: #fafafa;
+  padding: 15px 20px;
+  font-size: 14px;
+  color: #555;
+  border-top: 1px solid #eee;
+}
+
 .orders-empty {
   text-align: center;
-  margin-top: 60px;
+  padding: 60px 20px;
+  color: #555;
 }
 
 .orders-empty h3 {
-  font-weight: 600;
-  color: #333;
+  margin-bottom: 10px;
 }

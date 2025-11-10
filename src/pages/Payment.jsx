@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useCart } from "../context/CartContext";
-import { useNavigate } from "react-router-dom"; // 🔹 Dùng để điều hướng
+import { useNavigate } from "react-router-dom";
 import "../styles/Payment.css";
 
 export default function Payment() {
@@ -11,12 +11,12 @@ export default function Payment() {
   const taxRate = 0.1;
   const tax = subtotal * taxRate;
 
-  // 🔹 map phí ship cho từng sản phẩm
+  // ✅ map phí ship cho từng sản phẩm
   const [shippingMap, setShippingMap] = useState(() =>
     Object.fromEntries(items.map((i) => [i.id, 0]))
   );
 
-  // 🔹 đồng bộ shippingMap khi giỏ thay đổi
+  // ✅ đồng bộ shippingMap khi giỏ thay đổi
   useEffect(() => {
     setShippingMap((prev) => {
       const next = { ...prev };
@@ -28,21 +28,31 @@ export default function Payment() {
     });
   }, [items]);
 
-  // 🔹 tổng phí vận chuyển
   const shippingTotal = useMemo(
     () => items.reduce((s, it) => s + (shippingMap[it.id] || 0), 0),
     [items, shippingMap]
   );
 
   const total = subtotal + tax + shippingTotal;
-
   const formatVND = (n) =>
     (n || 0).toLocaleString("vi-VN", { style: "currency", currency: "VND" });
 
-  // 🔹 Khi nhấn “Đặt hàng ngay”
+  // ✅ form thông tin người nhận
+  const [receiverName, setReceiverName] = useState("");
+  const [receiverPhone, setReceiverPhone] = useState("");
+  const [receiverAddress, setReceiverAddress] = useState("");
+  const [note, setNote] = useState("");
+  const [deliveryDate, setDeliveryDate] = useState("");
+
+  // ✅ Khi nhấn “Đặt hàng ngay”
   const handlePlaceOrder = () => {
     if (items.length === 0) {
       alert("🛒 Giỏ hàng của bạn đang trống!");
+      return;
+    }
+
+    if (!receiverName || !receiverPhone || !receiverAddress) {
+      alert("⚠️ Vui lòng nhập đầy đủ thông tin người nhận!");
       return;
     }
 
@@ -54,6 +64,14 @@ export default function Payment() {
       tax,
       shippingTotal,
       items,
+      status: "Đang chuẩn bị",
+      receiver: {
+        name: receiverName,
+        phone: receiverPhone,
+        address: receiverAddress,
+        note,
+        deliveryDate: deliveryDate || "Chưa chọn ngày",
+      },
     };
 
     // ✅ Lưu vào localStorage
@@ -64,7 +82,7 @@ export default function Payment() {
       "🎉 Đặt hàng thành công! Cảm ơn bạn đã mua sắm tại HomeLiving Store!"
     );
     clearCart();
-    navigate("/your-orders"); // ✅ Chuyển hướng sang trang Your Orders
+    navigate("/your-orders");
   };
 
   return (
@@ -78,7 +96,9 @@ export default function Payment() {
             <div key={item.id} className="payment-card">
               <p className="delivery-date">
                 Ngày giao hàng dự kiến:{" "}
-                <span className="text-success">Thứ Hai, 17 Tháng 11</span>
+                <span className="text-success">
+                  {deliveryDate || "Chưa chọn ngày"}
+                </span>
               </p>
 
               <div className="row">
@@ -128,7 +148,8 @@ export default function Payment() {
                         setShippingMap({ ...shippingMap, [item.id]: 0 })
                       }
                     />
-                    Thứ Hai, 17 Tháng 11 <br />
+                    Giao tiêu chuẩn (3–5 ngày)
+                    <br />
                     <span className="sub-text text-success">
                       Miễn phí vận chuyển
                     </span>
@@ -143,7 +164,8 @@ export default function Payment() {
                         setShippingMap({ ...shippingMap, [item.id]: 120000 })
                       }
                     />
-                    Thứ Ba, 11 Tháng 11 <br />
+                    Giao nhanh (1–2 ngày)
+                    <br />
                     <span className="sub-text">
                       + {formatVND(120000)} — Giao nhanh
                     </span>
@@ -158,7 +180,8 @@ export default function Payment() {
                         setShippingMap({ ...shippingMap, [item.id]: 250000 })
                       }
                     />
-                    Thứ Sáu, 7 Tháng 11 <br />
+                    Giao hỏa tốc (trong ngày)
+                    <br />
                     <span className="sub-text">
                       + {formatVND(250000)} — Hỏa tốc
                     </span>
@@ -171,8 +194,40 @@ export default function Payment() {
 
         {/* RIGHT COLUMN */}
         <div className="order-summary">
-          <h5>Tóm tắt đơn hàng</h5>
+          <h5>Thông tin giao hàng</h5>
+          <input
+            type="text"
+            placeholder="Họ và tên người nhận"
+            value={receiverName}
+            onChange={(e) => setReceiverName(e.target.value)}
+          />
+          <input
+            type="tel"
+            placeholder="Số điện thoại"
+            value={receiverPhone}
+            onChange={(e) => setReceiverPhone(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Địa chỉ giao hàng"
+            value={receiverAddress}
+            onChange={(e) => setReceiverAddress(e.target.value)}
+          />
+          <textarea
+            placeholder="Ghi chú (tuỳ chọn)"
+            value={note}
+            onChange={(e) => setNote(e.target.value)}
+          />
+          <label>
+            Ngày giao hàng mong muốn:
+            <input
+              type="date"
+              value={deliveryDate}
+              onChange={(e) => setDeliveryDate(e.target.value)}
+            />
+          </label>
 
+          <h5 style={{ marginTop: "20px" }}>Tóm tắt đơn hàng</h5>
           <div className="summary-row">
             <span>Sản phẩm ({items.length}):</span>
             <span>{formatVND(subtotal)}</span>

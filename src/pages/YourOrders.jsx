@@ -18,7 +18,7 @@ export default function YourOrders() {
 
   const handleBuyAgain = (item) => {
     addItem(item, 1);
-    navigate("/#products"); // hoặc "/" tùy bạn muốn
+    navigate("/#products"); // hoặc "/" tùy cấu trúc bạn
   };
 
   const handleTrack = (orderId) => {
@@ -47,11 +47,20 @@ export default function YourOrders() {
               <p>
                 <strong>Tổng cộng:</strong> {formatVND(order.total)}
               </p>
+              <p>
+                <strong>Trạng thái:</strong>{" "}
+                <span className="status-tag">{order.status}</span>
+              </p>
             </div>
             <div>
               <p>
                 <strong>Mã đơn hàng:</strong> {order.id}
               </p>
+              {order.receiver && (
+                <p>
+                  <strong>Người nhận:</strong> {order.receiver.name}
+                </p>
+              )}
             </div>
           </div>
 
@@ -62,7 +71,14 @@ export default function YourOrders() {
                   <img src={item.image} alt={item.name} />
                   <div>
                     <h5>{item.name}</h5>
-                    <p>Ngày nhận: 18 Tháng 11</p>
+                    {order.receiver && (
+                      <p>
+                        Ngày giao dự kiến:{" "}
+                        <span className="text-success">
+                          {order.receiver.deliveryDate}
+                        </span>
+                      </p>
+                    )}
                     <p>Số lượng: {item.qty}</p>
                     <button
                       className="buy-again-btn"
@@ -72,6 +88,7 @@ export default function YourOrders() {
                     </button>
                   </div>
                 </div>
+
                 <div className="order-item-right">
                   <button
                     className="track-btn"
@@ -83,6 +100,20 @@ export default function YourOrders() {
               </div>
             ))}
           </div>
+
+          {order.receiver && (
+            <div className="order-footer">
+              <p>
+                <strong>Địa chỉ giao hàng:</strong> {order.receiver.address},
+                SĐT: {order.receiver.phone}
+              </p>
+              {order.receiver.note && (
+                <p>
+                  <strong>Ghi chú:</strong> {order.receiver.note}
+                </p>
+              )}
+            </div>
+          )}
         </div>
       ))}
     </div>
